@@ -1,16 +1,17 @@
 MAKEFILES = $(shell find examples -name "*.mak")
-ROOT = $(PWD)
 
 .PHONY: all clean 
 
+# $(call maketarget[,clean])
+define maketarget
+ for file in $(MAKEFILES); \
+ do \
+ 	$(MAKE) -w -C $$(dirname $${file}) -f $$(basename $${file}) $1; \
+ done
+endef
+
 all:
-	@for file in $(MAKEFILES); \
-	do \
-		$(MAKE) -w -C $$(dirname $${file}) -f $$(basename $${file}); \
-	done
+	$(call maketarget)
 
 clean:
-	@for file in $(MAKEFILES); \
-	do \
-		$(MAKE) -w -C $$(dirname $${file}) -f $$(basename $${file}) clean; \
-	done
+	$(call maketarget,clean)
