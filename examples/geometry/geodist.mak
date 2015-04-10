@@ -22,13 +22,14 @@ PROGRAM    = ex-2
 CC = gcc
 
 CPPFLAGS = -I $(ROOT)/include
+LIBS += -lm
 
 # ****************************************************************************
 # *  Define the rules.                                                       *
 # ****************************************************************************
 
 $(PROGRAM): $(OBJECTS)
-#	gcc $^ -o $@ 
+	gcc $^ $(LIBS) -o $@ 
 
 clean:
 	rm -f $(PROGRAM)
