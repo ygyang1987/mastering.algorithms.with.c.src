@@ -15,7 +15,7 @@ ifndef SOURCES
 endif
 
 ifneq "$(MAKECMDGOALS)" "clean"
-   -include $(DEPENDS)/$(subst .c,.d,$(notdir $(SOURCES)))
+   -include $(addprefix $(DEPENDS)/,$(subst .c,.d,$(SOURCES)))
 endif
 
 clean_depends:
