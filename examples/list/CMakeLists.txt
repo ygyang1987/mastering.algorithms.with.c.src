@@ -1,0 +1,4 @@
+SET(ROOT ../..)
+INCLUDE_DIRECTORIES(${ROOT}/include)
+SET(SOURCES ex-1.c ${ROOT}/src/list.c)
+ADD_EXECUTABLE(list1 ${SOURCES})

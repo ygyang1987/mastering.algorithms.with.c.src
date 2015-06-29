@@ -1,0 +1,4 @@
+SET(ROOT ../..)
+INCLUDE_DIRECTORIES(${ROOT}/include)
+SET(SOURCES ex-1.c ${ROOT}/src/bit.c)
+ADD_EXECUTABLE(bit ${SOURCES})
