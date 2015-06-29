@@ -68,3 +68,15 @@ above, define the environment variable ALGOWC_TOPDIR  to the path at which the
 directory structure begins. It may also be necessary to change the name of the
 compiler or linker each makefile calls, or in a few isolated cases, adjust the
 list of libraries linked with certain executables.
+
+
+To build examples:
+	On Windows:
+		cmake [source_directory]
+
+	On Unix like OS:
+		make
+
+	or
+		cmake [source_directory]
+		

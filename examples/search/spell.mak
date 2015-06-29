@@ -8,14 +8,14 @@ VPATH = $(ROOT)/include $(ROOT)/src
 # ****************************************************************************
 # *  Define the variable SOURCES, which will be used in makedepend.mak.      *
 # ****************************************************************************
-SOURCES = ex-1.c \
+SOURCES = ex-2.c \
  bisearch.c \
  issort.c \
  spell.c
          
 OBJECTS = $(subst .c,.o,$(SOURCES)) 
 
-PROGRAM    = ex-1
+PROGRAM    = ex-2
 
 # ****************************************************************************
 # *  Define compiler options.                                                *
